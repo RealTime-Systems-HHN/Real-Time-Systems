@@ -1,0 +1,58 @@
+cmake:
+  application:
+    configuration-dir: 'C:/Users/Hunter/zephyrproject/zephyr/Signal_Sender'
+    source-dir: 'C:/Users/Hunter/zephyrproject/zephyr/Signal_Sender'
+  board:
+    name: 'nucleo_f439zi'
+    path:
+     - 'C:/Users/Hunter/zephyrproject/zephyr/boards/st/nucleo_f439zi'
+    qualifiers: 'stm32f439xx'
+    revision: ''
+  devicetree:
+    bindings-dirs:
+     - 'C:/Users/Hunter/zephyrproject/zephyr/dts/bindings'
+    files:
+     - 'C:/Users/Hunter/zephyrproject/zephyr/boards/st/nucleo_f439zi/nucleo_f439zi.dts'
+    include-dirs:
+     - 'C:/Users/Hunter/zephyrproject/modules/hal/ambiq/dts'
+     - 'C:/Users/Hunter/zephyrproject/modules/hal/atmel/include'
+     - 'C:/Users/Hunter/zephyrproject/modules/hal/bouffalolab/include'
+     - 'C:/Users/Hunter/zephyrproject/modules/hal/bouffalolab/include/zephyr'
+     - 'C:/Users/Hunter/zephyrproject/modules/hal/gigadevice/include'
+     - 'C:/Users/Hunter/zephyrproject/modules/hal/microchip/include'
+     - 'C:/Users/Hunter/zephyrproject/modules/hal/microchip/dts'
+     - 'C:/Users/Hunter/zephyrproject/modules/hal/nuvoton/dts'
+     - 'C:/Users/Hunter/zephyrproject/modules/hal/nxp/dts'
+     - 'C:/Users/Hunter/zephyrproject/modules/hal/stm32/dts'
+     - 'C:/Users/Hunter/zephyrproject/modules/hal/ti/dts'
+     - 'C:/Users/Hunter/zephyrproject/zephyr/include'
+     - 'C:/Users/Hunter/zephyrproject/zephyr/include/zephyr'
+     - 'C:/Users/Hunter/zephyrproject/zephyr/dts/common'
+     - 'C:/Users/Hunter/zephyrproject/zephyr/dts/vendor'
+     - 'C:/Users/Hunter/zephyrproject/zephyr/dts/rx'
+     - 'C:/Users/Hunter/zephyrproject/zephyr/dts/x86'
+     - 'C:/Users/Hunter/zephyrproject/zephyr/dts/xtensa'
+     - 'C:/Users/Hunter/zephyrproject/zephyr/dts/sparc'
+     - 'C:/Users/Hunter/zephyrproject/zephyr/dts/riscv'
+     - 'C:/Users/Hunter/zephyrproject/zephyr/dts/posix'
+     - 'C:/Users/Hunter/zephyrproject/zephyr/dts/arm64'
+     - 'C:/Users/Hunter/zephyrproject/zephyr/dts/arm'
+     - 'C:/Users/Hunter/zephyrproject/zephyr/dts/arc'
+     - 'C:/Users/Hunter/zephyrproject/zephyr/dts'
+  kconfig:
+    files:
+     - 'C:/Users/Hunter/zephyrproject/zephyr/boards/st/nucleo_f439zi/nucleo_f439zi_defconfig'
+     - 'C:/Users/Hunter/zephyrproject/zephyr/Signal_Sender/prj.conf'
+    user-files:
+     - 'C:/Users/Hunter/zephyrproject/zephyr/Signal_Sender/prj.conf'
+  toolchain:
+    name: 'zephyr'
+    path: 'C:/Users/Hunter/zephyr-sdk-1.0.0'
+  zephyr:
+    version: '4.3.99'
+    zephyr-base: 'C:/Users/Hunter/zephyrproject/zephyr'
+version: '0.1.0'
+west:
+  command: 'C:\Users\Hunter\zephyr_env\zephyr-venv\Scripts\west build -p always -b nucleo_f439zi .'
+  topdir: 'C:\Users\Hunter\zephyrproject'
+  version: '1.5.0'

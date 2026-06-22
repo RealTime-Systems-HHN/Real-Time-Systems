@@ -1,0 +1,5 @@
+west:
+  command: C:\Users\Hunter\zephyr_env\zephyr-venv\Scripts\west build -p always -b
+    nucleo_f439zi .
+  topdir: C:\Users\Hunter\zephyrproject
+  version: 1.5.0
