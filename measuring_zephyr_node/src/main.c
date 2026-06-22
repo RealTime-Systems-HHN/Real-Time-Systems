@@ -8,8 +8,8 @@
 
 /* only one of them should be active*/
 #define TEST_PATH_A 0
-#define TEST_PATH_B 1
-#define TEST_PATH_C 0
+#define TEST_PATH_B 0
+#define TEST_PATH_C 1
 
 #define BUTTON_PORT DT_NODELABEL(gpioc)
 #define BUTTON_PIN  13
