@@ -2,25 +2,25 @@
 
 STM32 FreeRTOS Pin Tracker
 
-Overview:
-This project is an embedded application built for the STM32 microcontroller. It utilizes the STM32 HAL library and FreeRTOS to manage real-time hardware interactions. The system concurrently handles continuous GPIO state tracking and a background heartbeat LED.
+**Overview**:
+**This project is an embedded application built for the STM32 microcontroller. It utilizes the STM32 HAL library and FreeRTOS to manage real-time hardware interactions. The system concurrently handles continuous GPIO state tracking and a background heartbeat LED.
 
-Features
+**Features**
 
 Real-Time Pin Tracking: Continuously monitors the state of an input pin and mirrors it to an output pin with a ≤10ms polling rate via a FreeRTOS task.
 RTOS Heartbeat: Maintains a stable 500ms blinking cycle on a status LED to verify that the FreeRTOS kernel is running smoothly without blocking other operations.
 
-Hardware Setup
+**Hardware Setup**
 
 This project is configured for an STM32 Nucleo board. 
 
-Software Requirements:
+**Software Requirements**:
 
 STM32CubeMX: For peripheral configuration and code generation.
 STM32CubeIDE: For compiling the C code and flashing the binary to the target board.
 FreeRTOS: CMSIS-v2 OS wrapper (integrated via CubeMX).
 
-The Pins That I’ve Used:
+**The Pins That I’ve Used**:
 
 1.PA4 - Used for receiving the signal from the board 1 
 2.PA3 - Used to send the signal to the board 2
@@ -28,7 +28,7 @@ The Pins That I’ve Used:
 
 
 
-Step-by-Step Setup and Flashing Guide
+S**tep-by-Step Setup and Flashing Guide**
 
 1. Project Initialization (STM32CubeMX)
 
@@ -52,4 +52,4 @@ If you are modifying the hardware peripherals:
 4. Wait for the console to output Download verified successfully and Resetting target.
 
 
-Note: To access the files of Download the zip file from the repository named "Freertos.zip".
+**Note: To access the files of Download the zip file from the repository named "Freertos.zip".**
