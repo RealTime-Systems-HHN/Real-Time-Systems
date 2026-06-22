@@ -1,6 +1,6 @@
-# Real-Time Systems
+# Real-Time Systems Lecture
 
-# Zephyr Measurement Node
+# Zephyr Measuring Node
 ## Overview
 
 This project implements the measurement node used in the distributed RTOS communication benchmark. Running on Zephyr RTOS, the node is responsible for initiating benchmark transactions, measuring end-to-end communication latency using the STM32 hardware cycle counter, and collecting statistical performance data from the distributed communication chain.
