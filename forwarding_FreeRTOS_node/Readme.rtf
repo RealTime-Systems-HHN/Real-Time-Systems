@@ -1,0 +1,87 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2868
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww38200\viewh21600\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\b\fs60 \cf0 \
+STM32 FreeRTOS Pin Tracker\
+\pard\tx720\tx1440\tx2160\tx2880\tx2910\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\b0\fs24 \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\b\fs44 \cf0 Overview:\
+
+\f1\b0\fs32 This project is an embedded application built for the STM32 microcontroller. It utilizes the STM32 HAL library and FreeRTOS to manage real-time hardware interactions. The system concurrently handles continuous GPIO state tracking and a background heartbeat LED.\
+\
+
+\f0\b Features\
+
+\f1\b0 \
+Real-Time Pin Tracking: Continuously monitors the state of an input pin and mirrors it to an output pin with a \uc0\u8804 10ms polling rate via a FreeRTOS task.\
+RTOS Heartbeat: Maintains a stable 500ms blinking cycle on a status LED to verify that the FreeRTOS kernel is running smoothly without blocking other operations.\
+\
+
+\f0\b Hardware Setup\
+
+\f1\b0 \
+This project is configured for an STM32 Nucleo board. \
+\
+
+\f0\b Software Requirements:\
+\
+
+\f1\b0 STM32CubeMX: For peripheral configuration and code generation.\
+STM32CubeIDE: For compiling the C code and flashing the binary to the target board.\
+FreeRTOS: CMSIS-v2 OS wrapper (integrated via CubeMX).\
+\
+
+\f0\b The Pins That I\'92ve Used:\
+\
+
+\f1\b0 1.PA4 - Used for receiving the signal from the board 1 \
+2.PA3 - Used to send the signal to the board 2\
+3.PB1- Used to send back the signal to the board 1\
+\
+\
+\
+
+\f0\b\fs46 Step-by-Step Setup and Flashing Guide
+\f1\b0\fs32 \
+\
+
+\f0\b 1. Project Initialization (STM32CubeMX)\
+
+\f1\b0 \
+If you are modifying the hardware peripherals:\
+1. Open the `.ioc` file in **STM32CubeMX**.\
+2. Make any necessary pinout or clock changes.\
+3. Click the **Generate Code** button in the top right corner. This updates the underlying hardware initialization files and safely injects them into the `/* USER CODE BEGIN */` sections of the codebase.\
+\
+ 
+\f0\b 2. Compilation (STM32CubeIDE)\
+
+\f1\b0 \
+1. Open the project folder in **STM32CubeIDE**.\
+2. In the `Core/Src/` directory, ensure `main.c` contains the updated FreeRTOS tasks.\
+3. Now build the program into the board\
+4. Verify in the bottom console that the build finishes with `0 errors, 0 warnings`.\
+\
+
+\f0\b 3. Flashing to the Target\
+
+\f1\b0 \
+1. Connect the STM32 Nucleo board to your machine via USB.\
+2. Click the green **Play/Run Icon** in the top toolbar.\
+3. *(First time only)* Select **STM32 Cortex-M C/C++ Application** in the "Run As" dialog and click OK.\
+4. Wait for the console to output `Download verified successfully` and `Resetting target`. \
+\
+
+\f0\b Expected Behavior\
+
+\f1\b0 \
+Once the board is successfully flashed and running:\
+1. **The Heartbeat:** The Green LED (**PB1**) will blink continuously every 500ms.\
+2. **The Mirror:** Applying 3.3V (Logic 1) to **PA4** will instantly push **PA3** high. Grounding **PA4** (Logic 0) will drop **PA3** low.}
